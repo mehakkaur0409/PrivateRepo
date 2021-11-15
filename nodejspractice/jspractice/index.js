@@ -10,6 +10,8 @@
 // //Funtion invoke
 // console.log(x);
 // getname();
+
+//hoisting of three functions: meaning calling fns before they are declared.
 console.log(getname1);
 console.log(x);
 console.log(r);
