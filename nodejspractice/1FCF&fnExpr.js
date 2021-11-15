@@ -5,23 +5,28 @@
 function printMehak() {
   console.log("mehak");
 }
+
 //normal method invoker
 printMehak();
 
 //!-----------------------------------
 //FCF
- function methodAcceptingFn(fn){
-   fn();
+function methodAcceptingFn(fn) {
+  fn();
+}
+//FCF method invoker
+methodAcceptingFn(printMehak);
 
- }
- //FCF method invoker
- methodAcceptingFn(printMehak);
+//!-----------------------------------
 
- //!-----------------------------------
+//function expression
+var r = function () {
+  console.log("function expression method called");
+};
+//function expression method invoker
+r();
 
- //function expression
- var r=function(){
-   console.log('function expression method called');
- }
-  //function expression method invoker
-  r();
+//arrow function
+var arry = () => {
+  console.log("array function called");
+};
