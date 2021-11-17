@@ -30,19 +30,30 @@
 
 //Scope chain
 
-function childFunctionToGlobalContext() {
-  //hence can access m
-  var z = 10;
-  console.log(m);
-  childFunctionToAboveFunction();
-  function childFunctionToAboveFunction() {
-    console.log(z);
-  }
+// function childFunctionToGlobalContext() {
+//   //hence can access m
+//   var z = 10;
+//   console.log(m);
+//   childFunctionToAboveFunction();
+//   function childFunctionToAboveFunction() {
+//     console.log(z);
+//   }
 
-  //   var x = () => {
-  //     console.log(m);
-  //   };
-  //   x();
+//   var x = () => {
+//     console.log(m);
+//   };
+//   x();
+//}
+// var m = 5;
+// childFunctionToGlobalContext();
+// var m = 8;
+
+// block scope
+var a = 100;
+let b = 5; //but b in script scope
+{
+  var a = 10; //a is in global scope
+  let b = 100; //b is in block scope, can't be accessed outside the block
+  const c = 20;
 }
-var m = 5;
-childFunctionToGlobalContext();
+console.log(b);
