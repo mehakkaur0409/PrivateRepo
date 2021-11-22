@@ -48,20 +48,23 @@
 // childFunctionToGlobalContext();
 // var m = 8;
 
-// block scope
-var a = 100;
-let b = 5; //but b in script scope
-{
-  var a = 10; //a is in global scope
-  let b = 100; //b is in block scope, can't be accessed outside the block
-  const c = 20;
-  console.log(b);
-}
-console.log(b); //this shadowed b inside block
+// // block scope
+// var a = 100;
+// let b = 5; //but b in script scope
+// {
+//   var a = 10; //a is in global scope
+//   let b = 100; //b is in block scope, can't be accessed outside the block
+//   const c = 20;
+//   console.log(b);
+// }
+// console.log(b); //this shadowed b inside block
 
 //let & const
 
 const z = 10;
-function a() {
-  const z = 1;
+function m() {
+  const z = 5;
+  console.log({ z });
 }
+console.log(m());
+console.log({ z });
