@@ -89,3 +89,9 @@ setTimeout(() => {
   clearInterval(timerId);
   alert("stop");
 }, 5000);
+
+//nested settimeout
+let timerId = setTimeout(function tick() {
+  alert("tick");
+  timerId = setTimeout(tick, 2000); // (*)
+}, 2000);
