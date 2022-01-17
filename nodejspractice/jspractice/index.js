@@ -95,3 +95,8 @@ let timerId = setTimeout(function tick() {
   alert("tick");
   timerId = setTimeout(tick, 2000); // (*)
 }, 2000);
+
+//zero delay timeout ??
+setTimeout(() => alert("World"));
+
+alert("Hello");
