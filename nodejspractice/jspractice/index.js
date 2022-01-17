@@ -82,6 +82,16 @@ init();
 
 //testing commit behaviour
 
+//simple set time out examlple:
+let a = 1;
+let b = 2;
+console.log("Sum =", a + b);
+
+setTimeout(() => {
+  console.log(a, b);
+}, 1000);
+
+//
 let timerId = setInterval(() => alert("tick"), 2000);
 
 // after 5 seconds stop
