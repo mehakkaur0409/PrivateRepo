@@ -110,3 +110,6 @@ let timerId = setTimeout(function tick() {
 setTimeout(() => alert("World"));
 
 alert("Hello");
+
+// empty function syntax
+() => {};
