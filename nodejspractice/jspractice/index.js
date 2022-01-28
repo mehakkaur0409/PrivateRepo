@@ -121,3 +121,16 @@ class Car extends React.Component {
     return <h2>Hi, I am a Car!</h2>;
   }
 }
+
+//
+function MyForm() {
+  return (
+    <form>
+      <label>
+        Enter your name:
+        <input type="text" />
+      </label>
+    </form>
+  );
+}
+ReactDOM.render(<MyForm />, document.getElementById("root"));
