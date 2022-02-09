@@ -3,10 +3,10 @@ import "./App.css";
 function App() {
   const [color, setColor] = useState("#fffaaa");
   const [count, setCount] = useState(0);
-  const twiceCount = doubleMyCount(count);
-  // const twiceCount = useMemo(() => {
-  //   return doubleMyCount(count);
-  // }, [count]);
+  //const twiceCount = doubleMyCount(count);
+  const twiceCount = useMemo(() => {
+    return doubleMyCount(count);
+  }, [count]);
   const generateRandomColor = () => {
     setColor("#" + Math.floor(Math.random() * 16777215).toString(16));
   };
