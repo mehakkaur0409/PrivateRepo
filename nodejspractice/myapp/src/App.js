@@ -17,7 +17,7 @@ function App() {
           style={{ backgroundColor: color }}
           onClick={generateRandomColor}
         >
-          Click to change my color!
+          Click to change my color! and this is and example of usememo hook.
         </button>
         <button onClick={() => setCount((prevCount) => prevCount + 1)}>
           I have been clicked {count} times
