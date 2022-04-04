@@ -43,7 +43,7 @@ function App() {
     },
   }}
   onLoadPaymentData={paymentRequest => {
-    console.log('load payment data', paymentRequest);
+    console.log('loading payment data', paymentRequest);
       } }
       />
   
