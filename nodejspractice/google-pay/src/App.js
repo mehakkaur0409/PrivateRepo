@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
     
-      <h1>  <img src={ logo } className="App-Logo" />google pay react demo</h1>
+      <h1>  <img src={ logo } className="App-Logo" />google UPI DEMO</h1>
       <hr />
       <GooglePayButton
         environment="TEST"
