@@ -22,4 +22,4 @@ class Car extends React.Component {
       </div>)
     };
   }
-}
+

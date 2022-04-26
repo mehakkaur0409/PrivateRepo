@@ -1,25 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import CourseCard from './components/CourseCard'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section className="card-list">
+      <CourseCard
+        courseName="Complete React Native 
+        Mobile App developer - Build 10 apps"
+        courseThumbnail="https://Link to Image"
+        courseDetails="2 Free + 92 Paid"
+        coursePrice="2,999"
+        courseDiscountedPrice="199"
+        courseDiscount="93"
+      />
+    </section>
   );
 }
+
 
 export default App;

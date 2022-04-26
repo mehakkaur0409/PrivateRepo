@@ -20,8 +20,9 @@ const CourseCard = ({
           </span>
         </h4>
         <button
-          type="button"
-          className="course-payment-button"
+                  type="button"
+                  onClick={displayRazorpay}
+                  className="course-payment-button"
         >
           Buy Now
         </button>
