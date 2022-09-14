@@ -1,5 +1,11 @@
 import { useState, useMemo } from "react";
 import "./App.css";
+
+import React, {Suspense } from "react"
+import { Waiting } from './waiting';
+const Text = React.lazy(() => import('./text'));
+const Buttons = React.lazy(() => import('./button'));
+
 function App() {
   const [color, setColor] = useState("#fffaaa");
   const [count, setCount] = useState(0);
@@ -12,19 +18,17 @@ function App() {
   };
   return (
     <div className="App">
-      <div className="demo-container">
-        <button
-          style={{ backgroundColor: color }}
-          onClick={generateRandomColor}
-        >
-          Click to change my color! and this is and example of usememo hook.
-        </button>
-        <button onClick={() => setCount((prevCount) => prevCount + 1)}>
-          I have been clicked {count} times by clicking on button
-        </button>
-        My double count = {twiceCount}
-      </div>
+        <Suspense fallback={<Waiting />}>
+            {tab === "text" ? <Text /> : <Button />}
+            <a href="#" onClick={_ => {
+                if(tab == "text") setTab("buttons")
+                else setTab("text")
+            }}>
+                Toggle
+            </a>
+        </Suspense>
     </div>
+    
   );
 }
 const doubleMyCount = (count) => {
